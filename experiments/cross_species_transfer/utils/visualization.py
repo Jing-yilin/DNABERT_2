@@ -15,9 +15,17 @@ class ExperimentVisualizer:
         self.save_dir = Path(save_dir)
         self.save_dir.mkdir(parents=True, exist_ok=True)
         
+        # Create subdirectories for different types of visualizations
+        (self.save_dir / "transfer_analysis").mkdir(exist_ok=True)
+        (self.save_dir / "learning_curves").mkdir(exist_ok=True)
+        (self.save_dir / "performance_metrics").mkdir(exist_ok=True)
+        (self.save_dir / "resource_usage").mkdir(exist_ok=True)
+        
         # Set style
         plt.style.use('default')
         sns.set_theme(style="whitegrid")
+        plt.rcParams['figure.dpi'] = 300
+        plt.rcParams['savefig.dpi'] = 300
     
     def plot_transfer_matrix(self, transfer_results: List[Dict]) -> None:
         """Plot transfer performance matrix between species pairs."""
