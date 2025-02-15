@@ -98,7 +98,9 @@ class AdaptiveTransferDNABERT:
         
         # Forward pass
         outputs = self.model(**inputs)
-        logits = torch.mean(outputs.last_hidden_state, dim=1)
+        # Add a projection layer to match target dimension
+        hidden = torch.mean(outputs.last_hidden_state, dim=1)
+        logits = nn.Linear(hidden.shape[1], 1).to(self.device)(hidden).squeeze(-1)
         
         # Compute loss
         loss = criterion(logits, labels)
@@ -129,7 +131,8 @@ class AdaptiveTransferDNABERT:
                 labels = batch_labels.to(self.device)
                 
                 outputs = self.model(**inputs)
-                logits = torch.mean(outputs.last_hidden_state, dim=1)
+                hidden = torch.mean(outputs.last_hidden_state, dim=1)
+                logits = nn.Linear(hidden.shape[1], 1).to(self.device)(hidden).squeeze(-1)
                 loss = criterion(logits, labels)
                 total_loss += loss.item()
         
