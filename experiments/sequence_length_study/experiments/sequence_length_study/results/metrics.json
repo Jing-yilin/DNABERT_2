@@ -1,0 +1,8 @@
+{
+    "average_processing_time": 28.744947910308838,
+    "std_processing_time": 13.36153874854098,
+    "total_sequences": 100,
+    "max_sequence_length": 1973,
+    "min_sequence_length": 116,
+    "embedding_similarity_mean": 0.9999998807907104
+}
