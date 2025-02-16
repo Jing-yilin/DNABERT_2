@@ -1,0 +1,123 @@
+{
+  "distance_matrix": {
+    "Homo_sapiens": {
+      "Homo_sapiens": 0.0,
+      "Mus_musculus": 0.8,
+      "Danio_rerio": 1.4000000000000001,
+      "Drosophila_melanogaster": 1.8
+    },
+    "Mus_musculus": {
+      "Homo_sapiens": 0.8,
+      "Mus_musculus": 0.0,
+      "Danio_rerio": 1.4000000000000001,
+      "Drosophila_melanogaster": 1.8
+    },
+    "Danio_rerio": {
+      "Homo_sapiens": 1.4000000000000001,
+      "Mus_musculus": 1.4000000000000001,
+      "Danio_rerio": 0.0,
+      "Drosophila_melanogaster": 2.0
+    },
+    "Drosophila_melanogaster": {
+      "Homo_sapiens": 1.8,
+      "Mus_musculus": 1.8,
+      "Danio_rerio": 2.0,
+      "Drosophila_melanogaster": 0.0
+    }
+  },
+  "transfer_performance": [
+    {
+      "source": "Homo_sapiens",
+      "target": "Mus_musculus",
+      "species_distance": 0.8,
+      "performance": 0.8617761135101318
+    },
+    {
+      "source": "Homo_sapiens",
+      "target": "Danio_rerio",
+      "species_distance": 1.4000000000000001,
+      "performance": 0.036612458527088165
+    },
+    {
+      "source": "Homo_sapiens",
+      "target": "Drosophila_melanogaster",
+      "species_distance": 1.8,
+      "performance": 0.05643820762634277
+    },
+    {
+      "source": "Mus_musculus",
+      "target": "Danio_rerio",
+      "species_distance": 1.4000000000000001,
+      "performance": 0.267458438873291
+    },
+    {
+      "source": "Mus_musculus",
+      "target": "Drosophila_melanogaster",
+      "species_distance": 1.8,
+      "performance": 0.06456582248210907
+    },
+    {
+      "source": "Danio_rerio",
+      "target": "Mus_musculus",
+      "species_distance": 1.4000000000000001,
+      "performance": 0.06130898371338844
+    },
+    {
+      "source": "Danio_rerio",
+      "target": "Drosophila_melanogaster",
+      "species_distance": 2.0,
+      "performance": 0.21602626144886017
+    }
+  ],
+  "learning_curves": {
+    "Homo_sapiens->Mus_musculus": [
+      0.23486533388495445,
+      0.31436778837814927,
+      0.5218502432107925,
+      0.29425936937332153,
+      0.3001089319586754
+    ],
+    "Homo_sapiens->Danio_rerio": [
+      0.1653834469616413,
+      0.20996993966400623,
+      0.22838242165744305,
+      0.21084707975387573,
+      0.28065216913819313
+    ],
+    "Homo_sapiens->Drosophila_melanogaster": [
+      0.23615809623152018,
+      0.18139573838561773,
+      0.2670862674713135,
+      0.31448803562670946,
+      0.14719551242887974
+    ],
+    "Mus_musculus->Danio_rerio": [
+      0.0870326361618936,
+      0.2568482756614685,
+      0.19784311670809984,
+      0.18757493421435356,
+      0.1635318985208869
+    ],
+    "Mus_musculus->Drosophila_melanogaster": [
+      0.07965508569031954,
+      0.21110392385162413,
+      0.3312654998153448,
+      0.2050017174333334,
+      0.15072036162018776
+    ],
+    "Danio_rerio->Mus_musculus": [
+      0.23996783420443535,
+      0.18414710741490126,
+      0.23511064797639847,
+      0.33105333894491196,
+      0.1045060595497489
+    ],
+    "Danio_rerio->Drosophila_melanogaster": [
+      0.3090172316879034,
+      0.31169814988970757,
+      0.15839693555608392,
+      0.1378151923418045,
+      0.14010839816182852
+    ]
+  }
+}
